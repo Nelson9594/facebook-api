@@ -2,7 +2,7 @@ import * as UserModel from '../models/user.model';
 
 
 export const findOneById = async (request, response) => {
-  const id = Number(request.params.id);
+  const id = request.params.id;
 
   response.json({
     user: await UserModel.findOneById(id),

@@ -11,7 +11,7 @@ export const createOne = ({ email, password }) => {
   });
 }
 
-export const findById = (id, select) => {
+export const findOneById = (id, select) => {
   return prisma.user.findUnique({
     where: { id },
     select,
