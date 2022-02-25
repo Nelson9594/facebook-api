@@ -99,9 +99,21 @@ model Post {
 Create a workspace :
 
 ```
-    mkdir facebook-api
+mkdir facebook-api && cd facebook-api
 ```
 
 Install NodeJS :
 
 [NodeJS](https://nodejs.org/en/download/)
+
+Launch : 
+
+```
+npm install -y
+```
+
+
+## Authors
+
+- [@nelson9594](https://github.com/Nelson9594)
+
