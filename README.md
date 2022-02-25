@@ -5,10 +5,8 @@
 ## <p>Summary</a>
 
 * [Preview](#preview)
-    <ul>
-        <li>[Prisma Models](#prisma)</li>
-        <li>[API Routes](#routes)</li>
-    </ul>
+	[Prisma Models](#prisma)
+        [API Routes](#routes)
 * [Install](#install)
 * [Authors](#authors)
 
