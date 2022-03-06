@@ -8,6 +8,6 @@ const api = Router();
 api.get('/:id/posts', UserController.findAll);
 api.get('/:id/profile', ProfileController.findOneById);
 api.put('/:id/profile', ProfileController.updatePosts);
-api.delete('/:id', UserController.deleteOne);
+api.delete('/:id', UserController.deleteById);
 
 export default api;

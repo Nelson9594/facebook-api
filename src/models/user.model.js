@@ -3,12 +3,20 @@ const prisma = new PrismaClient();
 
 export const createOne = ({ email, password }) => {
   return prisma.user.create({
-    data: {
-      email,
-      profile,
-      password    
+    data:{
+       email,
+       password,
+       Profile:{
+            create:{
+                firstName: '',
+                lastName: ''
+            }
+       },
+       createdAt,
+       updatedAt
     }
-  });
+})
+
 }
 
 export const findOneById = (id, select) => {
@@ -26,4 +34,10 @@ export const findByCredentials = ({ email, password }, select) => {
     },
     select,
   });
+}
+
+export const deleteById = async({id}) => {
+  return prisma.user.delete({
+      where: { id }
+  })
 }
