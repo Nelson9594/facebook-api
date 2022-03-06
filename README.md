@@ -112,6 +112,12 @@ Launch :
 npm install -y
 ```
 
+Start API !
+
+```
+npm run dev
+```
+
 
 ## Authors
 
