@@ -1,5 +1,6 @@
 import * as UserModel from '../models/user.model';
-
+import * as postsModel from '../models/posts.model';
+import * as ProfileModel from '../models/profile.model';
 
 export const findAll = async (_request, response) => {
   response.json({
@@ -30,10 +31,12 @@ export const updateOne = async (request, response) => {
   response.json({ user });
 }
 
-export const deleteOne = async (request, response) => {
+export const deleteById = async (request, response) => {
   const id = Number(request.params.id);
   
-  await UserModel.deleteOne(id);
+  await UserModel.deleteById(id);
+  await ProfileModel.deleteByUserId(id)
+  await postsModel.deleteByAuthorId(id)
 
-  response.status(204).end();
+  response.status(200).json();
 }
