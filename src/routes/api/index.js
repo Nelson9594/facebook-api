@@ -1,13 +1,15 @@
 import { Router } from 'express';
 /** Routes */
-import userRoutes from './user.route';
-
-/** Middlewares */
-//import jwt from '../../middlewares/jwt.middleware';
+import user from './user.route';
+import auth from './auth.routes';
+import posts from './posts.routes';
+import jwt from '../../middlewares/jwt.middleware';
 
 const api = Router();
 
-api.use('/user', userRoutes);
+api.use("/users",jwt,user)
+api.use("/posts",jwt, posts);
+api.use("/auth",auth);
 
 
 export default api;
