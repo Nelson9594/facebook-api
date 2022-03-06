@@ -112,7 +112,7 @@ Launch :
 npm install -y
 ```
 
-Start API !
+Start API :
 
 ```
 npm run dev
